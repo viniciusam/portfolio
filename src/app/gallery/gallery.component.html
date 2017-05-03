@@ -1,0 +1,23 @@
+<div class="gallery" *ngIf="images?.length > 0">
+    <div class="gallery-control pull-left clickable" (click)="previous()">
+        <i class="fa fa-chevron-left fa-2x"
+            aria-hidden="true"></i>
+    </div>
+    <div class="gallery-content">
+        <div class="gallery-image">
+            <p *ngIf="loading"><i class="fa fa-circle-o-notch fa-spin fa-3x"></i></p>
+            <img [src]="images[current].src"
+                [alt]="images[current].alt"
+                [hidden]="loading"
+                (load)="setLoading(false)" />
+        </div>
+        <div class="gallery-info">
+            <p [innerHTML]="images[current].description"></p>
+            <strong>{{ current+1 }} of {{ images.length }}</strong>
+        </div>
+    </div>
+    <div class="gallery-control pull-right clickable" (click)="next()">
+        <i class="fa fa-chevron-right fa-2x"
+            aria-hidden="true"></i>
+    </div>
+</div>

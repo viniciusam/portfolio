@@ -1,0 +1,28 @@
+<div class="container">
+    <!-- TODO: Get theme base url from server. -->
+    <div id="avatar-wrapper">
+        <img src="assets/img/profile.jpg" />
+    </div>
+    <h4 class="text-center">Vinicius Avellar Moreira</h4>
+    <!--<page-fragment slug="home"></page-fragment>-->
+    <div [innerHTML]="page?.content.rendered" id="intro-text"></div>
+</div>
+<div class="faded">
+    <div class="container">
+        <h3>Projects</h3>
+        <project-list [categories]="projectCategories" [projects]="projects"></project-list>
+    </div>
+</div>
+<div class="container">
+    <h3>Skills</h3>
+    <div *ngFor="let category of skillCategories">
+        <h4 class="text-sm-center">{{ category.name }}</h4>
+        <progress-bar *ngFor="let skill of getSkills(category)" [label]="skill.title.rendered" [value]="skill.value"></progress-bar>
+    </div>
+</div>
+<div class="faded">
+    <div class="container">
+        <h3>Contact</h3>
+        <contact></contact>
+    </div>
+</div>

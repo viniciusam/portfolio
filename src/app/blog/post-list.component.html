@@ -1,0 +1,9 @@
+<div class="container content-block" *ngIf="posts">
+    <div *ngIf="posts.length == 0">No posts found.</div>
+    <div *ngFor="let post of posts">   
+        <a [routerLink]="['/blog/post/', post.slug]"><h5>{{ post.title.rendered }}</h5></a>
+        <div [innerHTML]="post.excerpt.rendered"></div>
+        <p class="card-text"><small class="text-muted">{{ post.date | date:short }}</small></p>
+        <hr>
+    </div>
+</div>

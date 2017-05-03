@@ -1,0 +1,4 @@
+<div class="container content-block" *ngIf="post">
+    <h4>{{ post.title.rendered }}</h4>
+    <div [innerHTML]="post.content.rendered"></div>
+</div>

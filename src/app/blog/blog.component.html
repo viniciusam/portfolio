@@ -1,0 +1,15 @@
+<h3>Blog</h3>
+<hr>
+<div class="row">
+    <div class="col-md-3">
+        <div class="list-group">
+            <a class="list-group-item" *ngFor="let category of categories" [routerLink]="['/blog/category/', category.id]">
+                <span class="tag tag-default tag-pill pull-right">{{ category.count }}</span>{{ category.name }}
+            </a>
+        </div>
+        <!--<span class="tag tag-info" style="margin-right: 2px;" *ngFor="let tag of tags">{{ tag.name }}</span>-->
+    </div>
+    <div class="col-md-9">
+        <router-outlet></router-outlet>
+    </div>
+</div>

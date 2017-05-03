@@ -1,0 +1,7 @@
+<div class="container">
+    <button type="button" class="btn btn-info pull-right" style="cursor: pointer;" (click)="navigateBack()">Back</button>
+    <h3>{{ project?.title.rendered }}</h3>
+    <hr>
+    <div [innerHtml]="project?.content.rendered"></div>
+    <gallery [images]="galleryImages"></gallery>
+</div>

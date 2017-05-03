@@ -1,0 +1,29 @@
+<div class="row">
+    <div class="col-md-12">
+        <ul class="nav nav-tabs" style="margin-bottom: 10px;">
+            <li class="nav-item">
+                <a class="nav-link"
+                   [ngClass]="{ active: !categoryParam }"
+                   [routerLink]="['/me']">All</a>
+            </li>
+            <li class="nav-item" *ngFor="let category of categories">
+                <a class="nav-link" href=""
+                   [ngClass]="{active: categoryParam == category.slug}"
+                   (click)="selectCategory(category)">{{ category.name }}</a>
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="row">
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3" style="margin-bottom: 20px;" *ngFor="let project of filteredProjects">
+        <div class="card">
+            <img class="card-img-top" src="{{ project.image }}" alt="{{ project.title.rendered }}">
+            <div class="card-block">
+                <a [routerLink]="['/projects', project.slug]">
+                    <h4 class="card-title">{{ project.title.rendered }}</h4>
+                </a>
+                <p class="card-text">{{ project.short_description }}</p>
+            </div>
+        </div>
+    </div>
+</div>

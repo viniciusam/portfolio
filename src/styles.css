@@ -1,0 +1,57 @@
+/*@import url('https://fonts.googleapis.com/css?family=Nunito:400,700');*/
+
+body {
+    /*margin-top: 95px;*/
+    /*font-family: 'Nunito', sans-serif;*/
+    background-color: #fcfcfc;
+}
+
+img {
+    max-width: 100%;
+}
+
+#app-navbar {
+    background-color: #f7f7f7;
+    border-bottom: 1px solid #eee;
+    padding-top: 10px;
+    margin-bottom: 20px;
+}
+
+.avatar {
+    width: 35px;
+    height: 35px;
+    border-radius: 100px;
+    margin-right: 10px;
+}
+
+.rounded {
+    border-radius: 100%;
+}
+
+.content-block {
+    border-radius: .25rem;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    padding: .75rem 1.25rem;
+}
+
+.card > img {
+    width: 100%;
+    height: 180px;
+}
+
+footer {
+    /*border-top: .5px dashed #cecece;*/
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+footer p {
+    margin-bottom: .25rem;
+}
+
+/* Wordpress Classes */
+img.aligncenter {
+    display: block;
+    margin: auto;
+}

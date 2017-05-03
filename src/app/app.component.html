@@ -1,0 +1,54 @@
+<nav class="navbar navbar-light bg-faded navbar-toggleable-sm" id="app-navbar">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation-menu" aria-controls="navigation-menu" aria-expanded="true" aria-label="Toggle Navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="container collapse navbar-collape" id="navigation-menu">
+        <a class="navbar-brand" (click)="null">
+            <!--<img src="http://www.viniciusam.com/wp-content/themes/angular2/assets/img/profile.jpg" class="avatar pull-left" />-->
+            <h6 style="display: inline-block;">
+                <a [routerLink]="['/me']">Vinicius Avellar</a><br />
+                <small class="text-muted">Experienced Software Developer</small>
+            </h6>
+        </a>
+        <ul class="navbar-nav ml-auto">
+            <!--<li class="nav-item" routerLinkActive="active">
+                <a class="nav-link" [routerLink]="['/home']">Home</a>
+            </li>
+            <li class="nav-item" routerLinkActive="active">
+                <a class="nav-link" [routerLink]="['/projects']">Projects</a>
+            </li>
+            <li class="nav-item" routerLinkActive="active">
+                <a class="nav-link" [routerLink]="['/blog']">Blog</a>
+            </li>
+            <li class="nav-item" routerLinkActive="active">
+                <a class="nav-link" [routerLink]="['/contact']">Contact</a>
+            </li>-->
+            <li class="nav-item">
+                <a class="nav-link" href="https://www.linkedin.com/in/amvinicius/" target="_blank">
+                    <i class="fa fa-linkedin-square fa-lg"></i>
+                    <span>LinkedIn</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="https://github.com/viniciusam/" target="_blank">
+                    <i class="fa fa-github-square fa-lg"></i>
+                    <span>GitHub</span>
+                </a>
+            </li>
+            <!--<li class="nav-item">
+                <a class="nav-link" href="http://stackoverflow.com/users/5062499/vinicius-avellar" target="_blank">
+                    <i class="fa fa-stack-overflow fa-lg"></i>
+                    <span>StackOverflow</span>
+                </a>
+            </li>-->
+        </ul>
+    </div>
+</nav>
+
+<router-outlet></router-outlet>
+    
+<!--<footer class="text-muted">
+    <div class="container">
+    <p>Vinicius Avellar Moreira</p>
+    </div>
+</footer>-->
