@@ -7,7 +7,7 @@ import { Project } from '../model';
 
 @Injectable()
 export class ProjectResolver implements Resolve<Project> {
-  
+
   constructor(private _homeService: HomeService) {}
 
   resolve( route: ActivatedRouteSnapshot,

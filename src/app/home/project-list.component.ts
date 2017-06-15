@@ -18,7 +18,7 @@ export class ProjectListComponent implements OnInit, OnDestroy {
     @Input() categories: Category[];
     @Input() projects: Project[];
     filteredProjects: Project[];
-    
+
     categoryParam: string;
 
     private _routeSubscription: Subscription;
@@ -34,7 +34,7 @@ export class ProjectListComponent implements OnInit, OnDestroy {
                 if (!this.categoryParam) {
                     this.filteredProjects = this.projects;
                 } else {
-                    let category = this.getCategoryBySlug(this.categoryParam);
+                    const category = this.getCategoryBySlug(this.categoryParam);
                     this.filteredProjects = this.filterProjectsByCategory(category);
                 }
             }
@@ -48,13 +48,13 @@ export class ProjectListComponent implements OnInit, OnDestroy {
 
     getCategoryBySlug(slug: string): Category {
         return _.find(this.categories, function(category) {
-            return category.slug == slug;
+            return category.slug === slug;
         });
     }
 
     filterProjectsByCategory(category: Category): Project[] {
         return _.filter(this.projects, function (project) {
-            return _.contains(project["pe/categories/project"], category.id);
+            return _.contains(project['pe/categories/project'], category.id);
         });
     }
 

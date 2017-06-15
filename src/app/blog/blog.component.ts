@@ -5,7 +5,7 @@ import { Category, Tag } from '../model';
 
 @Component({
   selector: 'blog',
-  templateUrl: './blog.component.html' 
+  templateUrl: './blog.component.html'
 })
 export class BlogComponent implements OnInit {
 

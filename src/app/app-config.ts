@@ -12,8 +12,8 @@ export interface AppConfig {
 //     themeRoot: ''
 // };
 
-export var APP_CONFIG: AppConfig = {
+export const APP_CONFIG: AppConfig = {
     apiBaseUrl: 'http://wp.viniciusam.com/wp-json/wp/v2/',
-    //apiUrl: 'http://localhost:8080/wp-json/wp/v2/',
+    // apiUrl: 'http://localhost:8080/wp-json/wp/v2/',
     themeRoot: ''
 };

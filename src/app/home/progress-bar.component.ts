@@ -24,31 +24,34 @@ import { Component, OnInit, Input } from '@angular/core';
     `
 })
 export class ProgressBarComponent implements OnInit {
-    
+
     @Input() label: string;
     @Input() value: number;
-    min: number = 0;
-    max: number = 100;
+    min: number;
+    max: number;
 
-    constructor() { }
+    constructor() {
+        this.min = 0;
+        this.max = 100;
+    }
 
     ngOnInit() { }
 
     getClass() {
-        if (this.value < this.max*0.60)
+        if (this.value < this.max * 0.60)
             return 'bg-warning';
-        if (this.value >= this.max*0.60 && this.value < this.max*0.85)
+        if (this.value >= this.max * 0.60 && this.value < this.max * 0.85)
             return 'bg-success';
-        if (this.value >= this.max*0.85)
+        if (this.value >= this.max * 0.85)
             return 'bg-info';
     }
 
     getDescription() {
-        if (this.value < this.max*0.60)
+        if (this.value < this.max * 0.60)
             return 'Beginner';
-        if (this.value >= this.max*0.60 && this.value < this.max*0.85)
+        if (this.value >= this.max * 0.60 && this.value < this.max * 0.85)
             return 'Intermediate';
-        if (this.value >= this.max*0.85)
+        if (this.value >= this.max * 0.85)
             return 'Experienced';
     }
 

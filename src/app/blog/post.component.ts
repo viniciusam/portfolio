@@ -6,7 +6,7 @@ import { Post } from '../model';
 
 @Component({
   selector: 'post',
-  templateUrl: './post.component.html' 
+  templateUrl: './post.component.html'
 })
 export class PostComponent implements OnInit {
 
@@ -20,7 +20,7 @@ export class PostComponent implements OnInit {
   ngOnInit() {
     this._activatedRoute.params.subscribe(
       params => {
-        let slug = params['slug'];
+        const slug = params['slug'];
         if (!slug) return;
         this.loadPost(slug);
       }

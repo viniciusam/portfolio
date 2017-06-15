@@ -8,7 +8,7 @@ import { Page } from '../model';
     template: '<div [innerHTML]="page?.content.rendered"></div>'
 })
 export class PageFragmentComponent implements OnInit {
-    
+
     @Input() slug: string;
     page: Page;
 

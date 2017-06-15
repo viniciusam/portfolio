@@ -50,10 +50,15 @@ export class ProjectDetailsComponent implements OnInit {
     }
 
     private convertMedia(mediaList: Media[]): Image[] {
-        let images: Image[] = new Array();
-        for (let media of mediaList) {
-            images.push({ thumbnail: media.source_url, src: media.source_url, alt: media.title.rendered, description: media.caption.rendered });
-        }        
+        const images: Image[] = new Array();
+        for (const media of mediaList) {
+            images.push({
+                thumbnail: media.source_url,
+                src: media.source_url,
+                alt: media.title.rendered,
+                description: media.caption.rendered
+            });
+        }
         return images;
     }
 

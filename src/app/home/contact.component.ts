@@ -28,7 +28,7 @@ export class ContactComponent implements OnInit {
     @ViewChild(AlertComponent)
     private alertComponent: AlertComponent;
 
-    constructor(fb: FormBuilder, private _homeService: HomeService) { 
+    constructor(fb: FormBuilder, private _homeService: HomeService) {
         this.contactForm = fb.group({
             name: ['', Validators.required],
             email: ['', Validators.compose([Validators.required, AppValidators.email])],
@@ -50,14 +50,14 @@ export class ContactComponent implements OnInit {
             .subscribe(
                 res => {
                     this.sending = false;
-                    if (res.statusText == 'OK') {
+                    if (res.statusText === 'OK') {
                         this.contactForm.reset();
-                        this.alertComponent.show("Message sent! Thank you, I will reply asap.", "success");
+                        this.alertComponent.show('Message sent! Thank you, I will reply asap.', 'success');
                     }
                 },
                 err => {
                     this.sending = false;
-                    this.alertComponent.show("Error! Please contact me on LinkedIn or Skype.", "danger");
+                    this.alertComponent.show('Error! Please contact me on LinkedIn or Skype.', 'danger');
                     console.log(err);
                 }
             );

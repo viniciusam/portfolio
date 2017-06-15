@@ -13,20 +13,20 @@ export class BlogService {
     constructor(private http: Http) { }
 
     getCategories(): Observable<Category[]> {
-        return this.http.get(APP_CONFIG.apiBaseUrl + "categories")
+        return this.http.get(APP_CONFIG.apiBaseUrl + 'categories')
             .map(res => res.json());
     }
 
     getTags(): Observable<Category[]> {
-        return this.http.get(APP_CONFIG.apiBaseUrl + "tags")
+        return this.http.get(APP_CONFIG.apiBaseUrl + 'tags')
             .map(res => res.json());
     }
 
     getPosts(filters?): Observable<Post[]> {
-        var url = APP_CONFIG.apiBaseUrl + "posts";
+        let url = APP_CONFIG.apiBaseUrl + 'posts';
 
         if (filters && filters.categories) {
-            url += "?categories=" + filters.categories.join();
+            url += '?categories=' + filters.categories.join();
         }
 
         return this.http.get(url)
@@ -34,14 +34,14 @@ export class BlogService {
     }
 
     getPostBySlug(slug): Observable<Post> {
-        console.log(APP_CONFIG.apiBaseUrl + "posts?slug=" + slug);
-        return this.http.get(APP_CONFIG.apiBaseUrl + "posts?slug=" + slug)
+        console.log(APP_CONFIG.apiBaseUrl + 'posts?slug=' + slug);
+        return this.http.get(APP_CONFIG.apiBaseUrl + 'posts?slug=' + slug)
             .map(res => res.json()[0]);
     }
 
     getMediaById(id): Observable<Media> {
-        return this.http.get(APP_CONFIG.apiBaseUrl + "media/" + id)
-            .map(ret => { return ret.json()[0] });
+        return this.http.get(APP_CONFIG.apiBaseUrl + 'media/' + id)
+            .map(ret => ret.json()[0]);
     }
 
 }

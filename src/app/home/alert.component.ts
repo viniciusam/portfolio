@@ -6,11 +6,14 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class AlertComponent implements OnInit {
 
-    private type: string = "info";
-    private visible: boolean = false;
+    private type: string;
+    private visible: boolean;
     private message: string;
 
-    constructor() { }
+    constructor() {
+        this.type = 'info';
+        this.visible = false;
+    }
 
     ngOnInit() {
     }
@@ -18,7 +21,7 @@ export class AlertComponent implements OnInit {
     @Input()
     show(message: string, type?: string) {
         this.message = message;
-        this.type = type ? type : 'info';        
+        this.type = type ? type : 'info';
         this.visible = true;
     }
 

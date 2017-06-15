@@ -7,7 +7,7 @@ import { Post } from '../model';
 
 @Component({
   selector: 'posts',
-  templateUrl: './post-list.component.html' 
+  templateUrl: './post-list.component.html'
 })
 export class PostListComponent implements OnInit, OnDestroy {
 
@@ -21,12 +21,12 @@ export class PostListComponent implements OnInit, OnDestroy {
   ngOnInit() {
     this._routeSubscription = this._activatedRoute.params.subscribe(
       params => {
-        var filters = null;
-        var category = params['category'];
+        const category = params['category'];
+        let filters = null;
 
         if (category)
           filters = { categories: [ category ] };
-        
+
         this.loadPosts(filters);
       }
     )

@@ -10,7 +10,7 @@ export const blogRoutes: Routes = [
       { path: '', component: PostListComponent },
       { path: 'category/:category', component: PostListComponent },
       { path: 'tag/:tag', component: PostListComponent },
-      { path: 'post/:slug', component: PostComponent }  
+      { path: 'post/:slug', component: PostComponent }
     ]
   }
 ];

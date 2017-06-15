@@ -12,7 +12,7 @@ import { Page, Project, Category, Skill } from '../model';
 @Component({
   selector: 'home',
   styleUrls: ['./home.component.css'],
-  templateUrl: './home.component.html' 
+  templateUrl: './home.component.html'
 })
 export class HomeComponent implements OnInit {
 
@@ -38,7 +38,7 @@ export class HomeComponent implements OnInit {
 
   getSkills(category: Category): Skill[] {
     return _.filter(this.skills, function (skill) {
-      return _.contains(skill["pe/categories/skill"], category.id);
+      return _.contains(skill['pe/categories/skill'], category.id);
     });
   }
 
