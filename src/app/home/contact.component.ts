@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { FormBuilder, FormGroup, FormControl, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, AbstractControl, Validators } from '@angular/forms';
 
 import { AppValidators } from '../app-validators';
 import { HomeService } from './home.service';
@@ -38,7 +38,7 @@ export class ContactComponent implements OnInit {
 
     ngOnInit() { }
 
-    isInvalid(control: FormControl, validator?: string) {
+    isInvalid(control: AbstractControl, validator?: string) {
         return control.touched &&
                ((!validator && control.errors) || (validator && control.hasError(validator)));
     }

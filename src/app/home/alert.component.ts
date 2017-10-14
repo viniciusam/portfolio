@@ -6,9 +6,9 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class AlertComponent implements OnInit {
 
-    private type: string;
-    private visible: boolean;
-    private message: string;
+    type: string;
+    visible: boolean;
+    message: string;
 
     constructor() {
         this.type = 'info';

@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Http, XHRBackend, ConnectionBackend, RequestOptions, RequestOptionsArgs, Response } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 
-// import * as NProgress from 'nprogress';
+import * as NProgress from 'nprogress';
 
 @Injectable()
 export class CustomHttp extends Http {
